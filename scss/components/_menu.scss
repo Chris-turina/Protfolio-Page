@@ -4,8 +4,10 @@
   .bar-one, .bar-two, .bar-three {
     width: 20px;
     height: 2px;
-    background-color: #000;
+    // background-color: #b8bdc4;
+    background-color: #fff;
     border-radius: 100px;
+
   }
     &:hover {
       cursor: pointer;
@@ -34,6 +36,7 @@
 }
 
 .x-active {
+  color: #fff;
   .bar-one {
     animation: bar-one-line .15s  1 linear;
     animation-fill-mode: forwards;

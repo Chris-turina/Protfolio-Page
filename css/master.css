@@ -1,15 +1,27 @@
 * {
   margin: 0px;
   padding: 0px;
-  box-sizing: border-box; }
+  box-sizing: border-box;
+  font-family: 'Open Sans', sans-serif; }
 
 p {
   font-size: 18px; }
 
+body {
+  background: linear-gradient(to right, #06beb6, #48b1bf);
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+  height: 100%;
+  background-position: fixed;
+  color: #424851; }
+
+.tilte {
+  font-size: 30px; }
+
 .container {
-  width: 100vw;
-  height: 100vh;
-  margin: 10px; }
+  width: 100%;
+  height: 100%; }
 
 .header {
   display: flex;
@@ -23,11 +35,16 @@ p {
 
 .content {
   max-width: 1024px;
+  height: 100%;
   margin-top: 10px;
   margin-left: auto;
   margin-right: auto;
   display: flex;
   justify-content: center; }
+  @media (max-width: 1023px) {
+    .content {
+      flex-direction: column;
+      width: 100%; } }
 
 .about-me-page, .my-work-page, .contact {
   display: flex;
@@ -35,20 +52,29 @@ p {
   align-items: center;
   width: 33%;
   padding: 15px; }
+  @media (max-width: 1023px) {
+    .about-me-page, .my-work-page, .contact {
+      width: 100%; } }
 
 .header {
   width: 100%;
-  border: 2px solid #000;
   height: 150px;
   padding-left: 60px;
   padding-right: 60px;
-  align-items: center; }
+  align-items: center;
+  border-bottom: 3px solid #fff; }
 
 .menu {
   width: 50px;
   height: 50px;
-  border: 1px solid #000;
+  border: 1px solid #fff;
   border-radius: 100%; }
+
+.name {
+  font-weight: bolder;
+  text-decoration: underline;
+  font-size: 40px;
+  text-shadow: 1px 1px 2px #fff; }
 
 @keyframes about-me {
   100% {
@@ -96,7 +122,7 @@ p {
   .menu .bar-one, .menu .bar-two, .menu .bar-three {
     width: 20px;
     height: 2px;
-    background-color: #000;
+    background-color: #fff;
     border-radius: 100px; }
   .menu:hover {
     cursor: pointer; }
@@ -118,33 +144,35 @@ p {
   border-radius: 100%;
   display: none; }
 
-.x-active .bar-one {
-  animation: bar-one-line .15s  1 linear;
-  animation-fill-mode: forwards; }
-.x-active .bar-three {
-  animation: bar-three-line .15s  1 linear;
-  animation-fill-mode: forwards; }
-.x-active .about-me {
-  animation: about-me .5s ease-in-out 0s 1;
-  animation-fill-mode: forwards;
-  background-color: green; }
-.x-active .my-work {
-  animation: my-work .5s ease-in-out 0s 1;
-  animation-fill-mode: forwards;
-  background-color: blue; }
-.x-active .contact-page {
-  animation: contact-page .5s ease-in-out 0s 1;
-  animation-fill-mode: forwards;
-  background-color: red; }
-.x-active:hover .bar-one {
-  animation: bar-one-x .5s  linear;
-  animation-fill-mode: forwards; }
-.x-active:hover .bar-two {
-  animation: bar-two-x .5s  1 linear;
-  animation-fill-mode: forwards; }
-.x-active:hover .bar-three {
-  animation: bar-three-x .5s  1 linear;
-  animation-fill-mode: forwards; }
+.x-active {
+  color: #fff; }
+  .x-active .bar-one {
+    animation: bar-one-line .15s  1 linear;
+    animation-fill-mode: forwards; }
+  .x-active .bar-three {
+    animation: bar-three-line .15s  1 linear;
+    animation-fill-mode: forwards; }
+  .x-active .about-me {
+    animation: about-me .5s ease-in-out 0s 1;
+    animation-fill-mode: forwards;
+    background-color: green; }
+  .x-active .my-work {
+    animation: my-work .5s ease-in-out 0s 1;
+    animation-fill-mode: forwards;
+    background-color: blue; }
+  .x-active .contact-page {
+    animation: contact-page .5s ease-in-out 0s 1;
+    animation-fill-mode: forwards;
+    background-color: red; }
+  .x-active:hover .bar-one {
+    animation: bar-one-x .5s  linear;
+    animation-fill-mode: forwards; }
+  .x-active:hover .bar-two {
+    animation: bar-two-x .5s  1 linear;
+    animation-fill-mode: forwards; }
+  .x-active:hover .bar-three {
+    animation: bar-three-x .5s  1 linear;
+    animation-fill-mode: forwards; }
 
 .about-me:hover {
   transform: scale(1.5); }
@@ -156,15 +184,52 @@ p {
   transform: scale(1.5); }
 
 .about-me-page {
-  height: 100%;
-  border: 1px solid black; }
+  height: 100%; }
   .about-me-page img {
-    width: 200px; }
+    width: 200px;
+    border-radius: 15px;
+    border: 2px solid #fff; }
+
+.description {
+  margin-top: 20px;
+  letter-spacing: 2px; }
+  .description p {
+    margin-bottom: 15px;
+    padding: 7px;
+    border: 2px solid #fff; }
+
+.my-work-page {
+  text-align: center; }
+
+.title {
+  font-size: 25px;
+  border-bottom: 3px solid #fff;
+  margin-bottom: 20px; }
+
+.project-links {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 40%; }
+  .project-links a {
+    text-decoration: none;
+    color: navy; }
+    .project-links a:hover {
+      transform: scale(1.2); }
+
+.contact p {
+  margin: 5px; }
+.contact .title {
+  margin-top: -0.5px; }
+@media (max-width: 1023px) {
+  .contact {
+    padding: 30px; } }
 
 .linkedin {
   background-image: url(../img/linked.png);
   background-size: cover;
   width: 50px;
-  height: 50px; }
+  height: 50px;
+  margin-top: 10px; }
 
 /*# sourceMappingURL=master.css.map */

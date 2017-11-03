@@ -1,0 +1,19 @@
+.about-me-page {
+  height: 100%;
+  // border: 1px solid #fff;
+    img {
+      width: 200px;
+      border-radius: 15px;
+      border: 2px solid #fff;
+    }
+}
+
+.description {
+  margin-top: 20px;
+  letter-spacing: 2px;
+    p{
+      margin-bottom: 15px;
+      padding: 7px;
+      border: 2px solid #fff;
+    }
+}
