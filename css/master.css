@@ -31,21 +31,50 @@
   border: 1px solid #000;
   border-radius: 100%; }
 
+@keyframes about-me {
+  100% {
+    left: -50px;
+    top: -35px; } }
+@keyframes my-work {
+  100% {
+    left: -55px;
+    top: 25px; } }
+@keyframes contact-page {
+  100% {
+    top: 60px; } }
 @keyframes bar-one {
   100% {
-    transform: translateY(8px) translate(1px) rotate(90deg); } }
+    transform: translateY(8px) translateX(1px) rotate(90deg); } }
 @keyframes bar-three {
   100% {
     transform: translateY(-8px); } }
 @keyframes bar-one-line {
+  0% {
+    transform: translateY(8px); }
   100% {
     transform: translateY(8px); } }
 @keyframes bar-three-line {
+  0% {
+    transform: translateY(-8px); }
   100% {
     transform: translateY(-8px); } }
+@keyframes bar-one-x {
+  0% {
+    transform: translateY(8px); }
+  100% {
+    transform: translateY(9px) translateX(1px) rotate(135deg); } }
+@keyframes bar-two-x {
+  100% {
+    transform: rotate(135deg); } }
+@keyframes bar-three-x {
+  0% {
+    transform: translateY(-8px); }
+  100% {
+    transform: translateY(-8px) rotate(45deg); } }
 .menu {
+  position: relative;
   padding: 15px; }
-  .menu div {
+  .menu .bar-one, .menu .bar-two, .menu .bar-three {
     width: 20px;
     height: 2px;
     background-color: #000;
@@ -53,20 +82,48 @@
   .menu:hover {
     cursor: pointer; }
     .menu:hover .bar-one {
-      animation: bar-one .25s 1 linear;
+      animation: bar-one .25s  1 linear;
       transform-origin: top;
       animation-fill-mode: forwards; }
     .menu:hover .bar-three {
-      animation: bar-three .25s 1 linear;
+      animation: bar-three .25s  1 linear;
       animation-fill-mode: forwards; }
 
+.about-me, .my-work, .contact-page {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  height: 100%;
+  border-radius: 100%;
+  display: none; }
+
 .x-active .bar-one {
-  animation: bar-one-line .15s 1 linear;
+  animation: bar-one-line .15s  1 linear;
   animation-fill-mode: forwards; }
 .x-active .bar-three {
-  animation: bar-three-line .15s 1 linear;
+  animation: bar-three-line .15s  1 linear;
   animation-fill-mode: forwards; }
-.x-active:hover {
-  background-color: black; }
+.x-active .about-me {
+  animation: about-me .5s ease-in-out 0s 1;
+  animation-fill-mode: forwards;
+  background-color: green; }
+.x-active .my-work {
+  animation: my-work .5s ease-in-out 0s 1;
+  animation-fill-mode: forwards;
+  background-color: blue; }
+.x-active .contact-page {
+  animation: contact-page .5s ease-in-out 0s 1;
+  animation-fill-mode: forwards;
+  background-color: red; }
+.x-active:hover .bar-one {
+  animation: bar-one-x .5s  linear;
+  animation-fill-mode: forwards; }
+.x-active:hover .bar-two {
+  animation: bar-two-x .5s  1 linear;
+  animation-fill-mode: forwards; }
+.x-active:hover .bar-three {
+  animation: bar-three-x .5s  1 linear;
+  animation-fill-mode: forwards; }
 
 /*# sourceMappingURL=master.css.map */
