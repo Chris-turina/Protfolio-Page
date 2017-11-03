@@ -3,8 +3,13 @@
   padding: 0px;
   box-sizing: border-box; }
 
+p {
+  font-size: 18px; }
+
 .container {
-  width: 100vw; }
+  width: 100vw;
+  height: 100vh;
+  margin: 10px; }
 
 .header {
   display: flex;
@@ -16,13 +21,27 @@
   justify-content: space-between;
   align-items: center; }
 
+.content {
+  max-width: 1024px;
+  margin-top: 10px;
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  justify-content: center; }
+
+.about-me-page, .my-work-page, .contact {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 33%;
+  padding: 15px; }
+
 .header {
   width: 100%;
   border: 2px solid #000;
   height: 150px;
   padding-left: 60px;
   padding-right: 60px;
-  position: fixed;
   align-items: center; }
 
 .menu {
@@ -38,7 +57,7 @@
 @keyframes my-work {
   100% {
     left: -55px;
-    top: 25px; } }
+    top: 30px; } }
 @keyframes contact-page {
   100% {
     top: 60px; } }
@@ -91,6 +110,7 @@
 
 .about-me, .my-work, .contact-page {
   position: absolute;
+  text-align: center;
   top: 0px;
   left: 0px;
   width: 100%;
@@ -125,5 +145,26 @@
 .x-active:hover .bar-three {
   animation: bar-three-x .5s  1 linear;
   animation-fill-mode: forwards; }
+
+.about-me:hover {
+  transform: scale(1.5); }
+
+.my-work:hover {
+  transform: scale(1.5); }
+
+.contact-page:hover {
+  transform: scale(1.5); }
+
+.about-me-page {
+  height: 100%;
+  border: 1px solid black; }
+  .about-me-page img {
+    width: 200px; }
+
+.linkedin {
+  background-image: url(../img/linked.png);
+  background-size: cover;
+  width: 50px;
+  height: 50px; }
 
 /*# sourceMappingURL=master.css.map */
