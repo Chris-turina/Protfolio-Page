@@ -1,0 +1,42 @@
+.menu {
+  padding: 15px;
+  div {
+    width: 20px;
+    height: 2px;
+    background-color: #000;
+    border-radius: 100px;
+  }
+
+    &:hover {
+      cursor: pointer;
+
+
+      .bar-one {
+        animation: bar-one .25s 1 linear;
+        transform-origin: top;
+        animation-fill-mode: forwards;
+      }
+
+      .bar-three {
+        animation: bar-three .25s 1 linear;
+        animation-fill-mode: forwards;
+
+      }
+    }
+}
+
+.x-active {
+  .bar-one {
+    animation: bar-one-line .15s 1 linear;
+    animation-fill-mode: forwards;
+  }
+
+  .bar-three {
+    animation: bar-three-line .15s 1 linear;
+    animation-fill-mode: forwards;
+  }
+
+    &:hover {
+      background-color: black;
+    }
+}
