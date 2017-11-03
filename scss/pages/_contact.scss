@@ -18,4 +18,17 @@
   width: 50px;
   height: 50px;
   margin-top: 10px;
+  transition: ease-in-out;
+
+  &:hover {
+    animation: wobble;
+  }
+}
+
+@keyframes wobble {
+  0% {}
+
+  100% {transform: skewX(30px);
+  }
+
 }

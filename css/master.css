@@ -230,6 +230,13 @@ body {
   background-size: cover;
   width: 50px;
   height: 50px;
-  margin-top: 10px; }
+  margin-top: 10px;
+  transition: ease-in-out; }
+  .linkedin:hover {
+    animation: wobble; }
+
+@keyframes wobble {
+  100% {
+    transform: skewX(30px); } }
 
 /*# sourceMappingURL=master.css.map */
